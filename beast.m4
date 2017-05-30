@@ -53,4 +53,29 @@ define(`UNIFORM_DISTR',
     <Uniform name="distr"/>
 </prior>')
 
+### TREE OPERATORS ###
+
+define(`SA_TREE_OPERATORS',
+`<operator spec="SAScaleOperator" scaleFactor="0.5" tree="@$1" weight="20.0"/>
+<operator spec="SAScaleOperator" rootOnly="true" scaleFactor="0.95" tree="@$1" weight="20.0"/>
+<operator spec="SAUniform" tree="@$1" weight="20.0"/>
+<operator spec="SAWilsonBalding" tree="@$1" weight="20.0"/>
+<operator spec="SAExchange" isNarrow="false" tree="@$1" weight="20.0"/>
+<operator spec="SAExchange" tree="@$1" weight="20.0"/>
+<operator spec="LeafToSampledAncestorJump" tree="@$1" weight="20.0"/>')
+
+### MISC ###
+
+define(`ELEMENT_MAP',
+`<map name="Uniform" >beast.math.distributions.Uniform</map>
+<map name="Exponential" >beast.math.distributions.Exponential</map>
+<map name="LogNormal" >beast.math.distributions.LogNormalDistributionModel</map>
+<map name="Normal" >beast.math.distributions.Normal</map>
+<map name="Beta" >beast.math.distributions.Beta</map>
+<map name="Gamma" >beast.math.distributions.Gamma</map>
+<map name="LaplaceDistribution" >beast.math.distributions.LaplaceDistribution</map>
+<map name="prior" >beast.math.distributions.Prior</map>
+<map name="InverseGamma" >beast.math.distributions.InverseGamma</map>
+<map name="OneOnX" >beast.math.distributions.OneOnX</map>')
+
 divert(0)dnl
