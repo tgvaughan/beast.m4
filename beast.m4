@@ -22,7 +22,7 @@ define(`DATE_TRAIT',
 
 define(`NORMAL_DISTR',
 `<distribution spec="beast.math.distributions.Prior" x="@$1">
-    <distr spec="math.distributions.Normal">
+    <distr spec="beast.math.distributions.Normal">
         <mean spec="beast.core.parameter.RealParameter" estimate="false">$2</mean>
         <sigma spec="beast.core.parameter.RealParameter" estimate="false">$3</sigma>
     </distr>
@@ -30,27 +30,27 @@ define(`NORMAL_DISTR',
 
 define(`LOGN_DISTR',
 `<distribution spec="beast.math.distributions.Prior" x="@$1">
-    <distr spec="math.distributions.LogNormal" $4>
+    <distr spec="beast.math.distributions.LogNormal" $4>
         <M spec="beast.core.parameter.RealParameter" estimate="false">$2</M>
-        <S spec="beast.core.parameter.RealParameter" estimate="false" lower="0.0" upper="5.0">$3</S>
+        <S spec="beast.core.parameter.RealParameter" estimate="false" lower="0.0">$3</S>
     </distr>
 </distribution>')
 
 define(`EXP_DISTR',
 `<distribution spec="beast.math.distributions.Prior" x="@$1">
-    <distr spec="math.distributions.Exponential">
+    <distr spec="beast.math.distributions.Exponential">
         <mean spec="beast.core.parameter.RealParameter" estimate="false">$2</mean>
     </distr>
 </distribution>')
 
 define(`ONEONX_DISTR',
 `<distribution spec="beast.math.distributions.Prior" x="@$1">
-    <distr spec="math.distributions.OneOnX"/>
+    <distr spec="beast.math.distributions.OneOnX"/>
 </distribution>')
 
 define(`UNIFORM_DISTR',
 `<distribution spec="beast.math.distributions.Prior" x="@$1">
-    <distr spec="math.distributions.Uniform"/>
+    <distr spec="beast.math.distributions.Uniform" lower="$2" upper="$3"/>
 </distribution>')
 
 ### OPERATORS ###
