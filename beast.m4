@@ -30,7 +30,7 @@ define(`NORMAL_DISTR',
 
 define(`LOGN_DISTR',
 `<distribution spec="beast.math.distributions.Prior" x="@$1">
-    <distr spec="beast.math.distributions.LogNormal" $4>
+    <distr spec="beast.math.distributions.LogNormalDistributionModel" $4>
         <M spec="beast.core.parameter.RealParameter" estimate="false">$2</M>
         <S spec="beast.core.parameter.RealParameter" estimate="false" lower="0.0">$3</S>
     </distr>
