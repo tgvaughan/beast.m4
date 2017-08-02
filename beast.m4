@@ -11,7 +11,7 @@ include(`$2')
 </data>')
 
 define(`DATE_TRAIT',
-`<trait id="dateTrait.t" spec="beast.evolution.tree.TraitSet" traitname="date">
+`<trait id="dateTrait.t" spec="beast.evolution.tree.TraitSet" traitname="date" $3>
     include($2)
     <taxa id="TaxonSet" spec="TaxonSet">
         <alignment idref="$1"/>
