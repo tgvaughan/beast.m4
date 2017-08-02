@@ -96,6 +96,12 @@ define(`PARAM_SCALE_OPERATORS',
 `<operator spec="ScaleOperator" parameter="@PARAM(i)" scaleFactor="0.8" weight="PARAM_WEIGHT(i)"/>
 ')dnl')
 
-
+### INITIAL TREES ###
+define(`RANDOM_TREE',
+`<init spec="beast.evolution.tree.RandomTree" estimate="false" initial="@$1" taxa="@$2">
+         <populationModel spec="ConstantPopulation">
+             <popSize spec="beast.core.parameter.RealParameter" value="$3"/>
+         </populationModel>
+</init>')
 
 divert(0)dnl
